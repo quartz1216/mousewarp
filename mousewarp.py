@@ -7,6 +7,7 @@ import threading
 from PIL import Image
 import sys
 from pathlib import Path
+from plyer import notification
 
 def resource_path(relative_path):
     base_path = getattr(sys, '_MEIPASS', str(Path(__file__).absolute().parent))
@@ -47,5 +48,8 @@ icon = pystray.Icon("name", image, "MouseWarp", menu)
 cursor_thread = threading.Thread(target = move_cursor_thread)
 cursor_thread.daemon = True
 cursor_thread.start()
+
+message = "Move the cursor to the center of the focused window when pressing Alt + Tab \n\nYou Can exit from the task tray\n"
+notification.notify(title="MouseWarp is Running",message=message,app_name="MouseWarp",app_icon=resource_path("icon.ico"),timeout=2)
 
 icon.run()
