@@ -1,4 +1,5 @@
 # About MouseWarp
+![](icon.ico)
 
 This program moves the mouse cursor to the selected window when AltTab is pressed.
 
