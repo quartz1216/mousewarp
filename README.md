@@ -24,4 +24,4 @@ install pywin32
 `pip install pywin32`
 
 Build execute file
-`pyinstaller .\mousewarp.py -F -w --add-data "icon.ico;." --add-data "icon.ico;." --clean --icon=icon.ico`
+`pyinstaller .\mousewarp.py -F -w --add-data "icon.ico;." --add-data "icon.ico;." --clean --icon=icon.ico --hidden-import plyer.platforms.win.notificationo`
